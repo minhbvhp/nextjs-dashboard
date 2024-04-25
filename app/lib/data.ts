@@ -53,6 +53,8 @@ export async function fetchLatestInvoices() {
 }
 
 export async function fetchCardData() {
+  const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
+  const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
   try {
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
