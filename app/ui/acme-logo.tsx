@@ -6,8 +6,8 @@ export default function AcmeLogo() {
     <div
       className={`${dancingScript.className} flex flex-row items-center leading-none text-white`}
     >
-      <GlobeAltIcon className="h-12 w-12 rotate-[15deg]" />
-      <p className="ml-3 text-[44px]">Dự án test</p>
+      <GlobeAltIcon className="h-14 w-14 rotate-[15deg]" />
+      <p className="ml-3 text-[40px]">Minh</p>
     </div>
   );
 }
