@@ -1,3 +1,26 @@
-export default function Page() {
-  return <p>Nội dung trang Khách hàng</p>;
+import { fetchFilteredCustomers } from '@/app/lib/data';
+import CustomersTable from '@/app/ui/customers/table';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Khách hàng',
+};
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
+  };
+}) {
+  const query = searchParams?.query || '';
+
+  const customers = await fetchFilteredCustomers(query);
+
+  return (
+    <main>
+      <CustomersTable customers={customers} />
+    </main>
+  );
 }

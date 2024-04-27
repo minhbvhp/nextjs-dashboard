@@ -6,6 +6,11 @@ import { inter } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hóa đơn',
+};
 
 export default async function Page({
   searchParams,
@@ -26,7 +31,7 @@ export default async function Page({
         <h1 className={`${inter.className} text-2xl`}>Hóa đơn</h1>
       </div>
       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
-        <Search placeholder="Tìm hóa đơn..." />
+        <Search placeholder="Lọc hóa đơn..." />
         <CreateInvoice />
       </div>
       <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>

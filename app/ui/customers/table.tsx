@@ -11,12 +11,14 @@ export default async function CustomersTable({
 }: {
   customers: FormattedCustomersTable[];
 }) {
+  console.log(customers);
+
   return (
     <div className="w-full">
       <h1 className={`${inter.className} mb-8 text-xl md:text-2xl`}>
-        Customers
+        Danh sách khách hàng
       </h1>
-      <Search placeholder="Search customers..." />
+      <Search placeholder="Lọc khách hàng..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
@@ -66,19 +68,19 @@ export default async function CustomersTable({
                 <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
                   <tr>
                     <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-                      Name
+                      Họ tên
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
                       Email
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
-                      Total Invoices
+                      Tổng số hóa đơn
                     </th>
                     <th scope="col" className="px-3 py-5 font-medium">
-                      Total Pending
+                      Chưa thanh toán
                     </th>
                     <th scope="col" className="px-4 py-5 font-medium">
-                      Total Paid
+                      Đã thanh toán
                     </th>
                   </tr>
                 </thead>
