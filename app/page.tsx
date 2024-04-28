@@ -17,8 +17,7 @@ export default function Page() {
           <p
             className={`${inter.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
           >
-            <strong>Xin chào.</strong> Đây là web thử nghiệm, hãy test thử các
-            chức năng và đừng nhập các thông tin thật nhé !
+            <strong>Xin chào.</strong> Demo test
           </p>
           <Link
             href="/dashboard"
