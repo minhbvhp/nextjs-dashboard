@@ -59,7 +59,7 @@ export default async function CustomersTable({
                       </div>
                     </div>
                     <div className="pt-4 text-sm">
-                      <p>{customer.total_invoices} invoices</p>
+                      <p>{customer.total_invoices} hóa đơn</p>
                     </div>
                   </div>
                 ))}
